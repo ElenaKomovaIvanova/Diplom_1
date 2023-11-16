@@ -9,13 +9,11 @@ import org.mockito.junit.MockitoJUnitRunner;
 import praktikum.Bun;
 import praktikum.Burger;
 import praktikum.Ingredient;
-
 import static praktikum.IngredientType.FILLING;
 import static praktikum.IngredientType.SAUCE;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
-
     @Mock
     Ingredient ingredient;
     @Mock
@@ -80,7 +78,7 @@ public class BurgerTest {
                 "(==== Пышная булочка ====)\n" +
                 "\n" +
                 "Price: 460,000000";
-        //Assert.assertTrue(textReceipt.equals(expTextReceipt));
-        System.out.println(burger.getReceipt());
+        Assert.assertTrue(textReceipt.equals(expTextReceipt));
+        //System.out.println(burger.getReceipt());
     }
 }

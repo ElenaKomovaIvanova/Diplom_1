@@ -1,13 +1,14 @@
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+//import org.junit.runners;
 import org.junit.runners.Parameterized;
 import praktikum.Bun;
+
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-
 public class BudTest {
     Bun bun;
     private final String name;
@@ -18,11 +19,11 @@ public class BudTest {
         this.price = price;
     }
 
-
     @Before
     public void newBun() {
         bun = new Bun(name, price);
     }
+
     @Parameterized.Parameters(name = "Наименование и цена булочки. Тестовые данные: {0} {1}")
     public static Object[][] getBud() {
         return new Object[][]{
@@ -35,11 +36,11 @@ public class BudTest {
 
     @Test
     public void testGetNameBun() {
-        assertEquals(bun.getName(),name);
+        assertEquals(name, bun.getName());
     }
 
     @Test
     public void testGetPriceBun() {
-        assertEquals (bun.getPrice(),price, 0.0);
+        assertEquals(price, bun.getPrice(), 0.0);
     }
 }

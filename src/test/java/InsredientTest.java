@@ -47,11 +47,11 @@ public class InsredientTest {
 
     @Test
     public void testGetNameIngredient() {
-        assertEquals(ingredient.getName(),name);
+        assertEquals(name,ingredient.getName());
     }
 
     @Test
     public void testGetPriceIngredient() {
-        assertEquals (ingredient.getPrice(),price, 0.0);
+        assertEquals (price,ingredient.getPrice(), 0.0);
     }
 }
